@@ -19,7 +19,7 @@ plotGene <- function(
   colnames(df_plot) <- c("gene", "time", "photo")
 
   ## Plot
-  p <- ggplot2::ggplot(data = df_plot, aes_string(x = "time", y = "gene", color = "photo")) +
+  p <- ggplot2::ggplot(data = df_plot, ggplot2::aes_string(x = "time", y = "gene", color = "photo")) +
     ggplot2::geom_line(size = 1.5) +
     ggplot2::scale_x_continuous(limits = c(0, 48), breaks = seq(0, 48, 4)) +
     ggplot2::labs(x = "ZT time (h)", y = paste0("Expression"), color = "Photoperiod") +
